@@ -153,25 +153,150 @@ export function renderPrefacePage() {
       </div>
     </div>
 
-    <!-- 社群擴散力量：IG 短影音推手 -->
+    <!-- 社群擴散力量：FB 企鵝社團引爆 ＋ IG 短影音推手 -->
     <div class="toy-card toy-card-teal" style="margin-bottom: 32px;">
-      <div style="display: flex; gap: 24px; align-items: center; flex-wrap: wrap;">
-        <div style="font-size: 3rem; flex-shrink: 0;">📱</div>
-        <div style="flex: 1; min-width: 280px;">
-          <h2 style="font-size: 1.35rem; color: var(--toy-teal-dark); margin-bottom: 8px;">
-            🚀 社群擴散的推手：IG 短影音帶來的流量與人氣
-          </h2>
-          <p style="font-size: 0.95rem; color: var(--ink-secondary); line-height: 1.8; margin-bottom: 12px;">
-            一個好專案除了內容本身，更需要懂它的伯樂。非常感謝在 Instagram 上有熱心創作者幫忙剪輯並發布了介紹短影音（<a href="https://www.instagram.com/reels/DebXS5UPDng/" target="_blank" style="color: var(--toy-teal-dark); text-decoration: underline; font-weight: 700;">查看 IG Reels 推薦影片</a>）。
-          </p>
-          <div style="background: #FFF; padding: 14px 18px; border-radius: 10px; border: 1px solid #C5E3DC; font-size: 0.92rem; line-height: 1.7;">
-            <strong>短影音剪輯與行銷帶來的啟發：</strong>
-            <ul style="padding-left: 20px; margin-top: 6px;">
-              <li><strong>開頭 3 秒抓痛點：</strong>開門見山點出「免買門票、在家帶孩子看野生動物」，瞬間擊中家長與熱愛自然的朋友。</li>
-              <li><strong>乾淨明快的畫面節奏：</strong>直接錄製點擊旋轉地球與斑馬喝水的真實動態，視覺說服力十足。</li>
-              <li><strong>社群語言連結：</strong>技術是冷靜的，但社群行銷賦予了它溫暖的分享動力，成為爆紅傳播的關鍵催化劑！</li>
-            </ul>
+      <h2 style="font-size: 1.35rem; color: var(--toy-teal-dark); margin-bottom: 8px;">
+        🚀 社群擴散的兩波推手：FB 企鵝社團引爆 ＋ IG 短影音行銷
+      </h2>
+      <p style="font-size: 0.95rem; color: var(--ink-secondary); line-height: 1.8; margin-bottom: 16px;">
+        一個好專案除了內容本身，更需要遇見懂它的同好與推手。回顧「全球動物現場」的傳播歷程，正是兩波社群能量讓它迅速走紅：
+      </p>
+
+      <div class="grid-2">
+        <!-- 第一波：FB 企鵝社團發布 -->
+        <div style="background: #FFF; padding: 18px; border-radius: 12px; border: 1.5px solid #C5E3DC; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 8px;">
+              <span class="toy-pill toy-pill-yellow" style="font-size: 0.78rem;">第一波燃點・同好社群</span>
+              <span style="font-size: 0.85rem; font-weight: 800; color: var(--toy-red);">三天破萬人造訪！</span>
+            </div>
+            <h3 style="font-size: 1.15rem; color: var(--ink-primary); margin-bottom: 8px;">
+              🐧 Facebook 企鵝同好社團熱情引爆
+            </h3>
+            <p style="font-size: 0.9rem; color: var(--ink-secondary); line-height: 1.7; margin-bottom: 12px;">
+              網站剛做出來時，作者將連結分享至 Facebook 企鵝愛好者社團。大家一看到免出門、在電腦前就能隨時觀看全球野生企鵝搖擺晃腦的即時畫面，瞬間被深深療癒！社員熱情瘋狂轉發，<strong>短短三天造訪人次突破一萬，一週內迅速衝破兩萬人次！</strong>
+            </p>
           </div>
+          <div style="margin-top: 8px;">
+            <a href="https://www.facebook.com/share/p/1BLxg64nEh/" target="_blank" class="toy-btn toy-btn-primary" style="font-size: 0.82rem; padding: 6px 14px;">
+              查看 FB 企鵝社團原始發文 ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- 第二波：IG 短影音推波助瀾 -->
+        <div style="background: #FFF; padding: 18px; border-radius: 12px; border: 1.5px solid #C5E3DC; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 8px;">
+              <span class="toy-pill toy-pill-teal" style="font-size: 0.78rem;">第二波擴散・短影音行銷</span>
+              <span style="font-size: 0.85rem; font-weight: 800; color: var(--toy-teal-dark);">破四萬人次大關</span>
+            </div>
+            <h3 style="font-size: 1.15rem; color: var(--ink-primary); margin-bottom: 8px;">
+              📱 IG 創作者主動剪輯熱烈推薦
+            </h3>
+            <p style="font-size: 0.9rem; color: var(--ink-secondary); line-height: 1.7; margin-bottom: 12px;">
+              感謝 Instagram 熱心創作者主動剪輯介紹短影音（<a href="https://www.instagram.com/reels/DebXS5UPDng/" target="_blank" style="color: var(--toy-teal-dark); text-decoration: underline; font-weight: 700;">觀看 IG Reels 影片</a>）。開頭黃金 3 秒直擊「免買門票、在家看野生動物」痛點，俐落動態展示加上社群分享動力，讓熱度持續延燒，一個多月累積造訪突破 41,000+ 人次！
+            </p>
+          </div>
+          <div style="margin-top: 8px;">
+            <a href="https://www.instagram.com/reels/DebXS5UPDng/" target="_blank" class="toy-btn toy-btn-teal" style="font-size: 0.82rem; padding: 6px 14px;">
+              觀看 IG 推薦短影音 ↗
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 延伸靈感來源：孕育出兩大 3D 校園系列的三大啟發網站 -->
+    <div class="toy-card toy-card-alt" style="margin-bottom: 24px; border: 2.5px solid #3C332A;">
+      <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 8px;">
+        <span class="toy-pill toy-pill-yellow">靈感起點</span>
+        <span class="toy-pill toy-pill-teal">技術原型</span>
+      </div>
+      <h2 style="font-size: 1.45rem; margin-bottom: 8px; color: var(--ink-primary);">
+        🧭 延伸靈感來源：孕育出「3D 校園系列」的三大啟發網站
+      </h2>
+      <p style="font-size: 0.95rem; color: var(--ink-secondary); line-height: 1.7; margin-bottom: 20px;">
+        在著手做出後來的「3D 校園導覽」與「南大附中探索群島」之前，作者深受國內外這三個極具創意與開創性的 Web 3D 專案啟發。正是吸取了它們在<strong>空間轉換、開放世界漫遊、以及微縮群島視覺</strong>上的優點，才摸索出更貼合教育場景的 3D 校園應用：
+      </p>
+
+      <div class="grid-3" style="margin-bottom: 10px;">
+        <!-- 網站 A: どこでもロケハン -->
+        <div style="background: #FFF; padding: 18px; border-radius: 14px; border: 1.5px solid #E8DAC8; border-top: 6px solid var(--toy-teal); display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <span class="toy-pill toy-pill-teal" style="font-size: 0.75rem; margin-bottom: 8px;">街景 3D 化先驅</span>
+            <h3 style="font-size: 1.15rem; color: var(--ink-primary); margin-bottom: 4px;">
+              どこでもロケハン
+            </h3>
+            <div style="font-size: 0.82rem; color: var(--toy-teal-dark); font-weight: 700; margin-bottom: 8px;">
+              Location Scout
+            </div>
+            <div style="font-size: 0.85rem; color: var(--ink-secondary); margin-bottom: 12px; line-height: 1.5;">
+              作者：MIYADAIKU（おやすみゲーム開発部，日本）<br>
+              <code style="font-size: 0.78rem;">tools.oyasumi-gamedev.com/rokehan</code>
+            </div>
+            <p style="font-size: 0.88rem; color: var(--ink-secondary); line-height: 1.6; margin-bottom: 12px;">
+              將全世界街道與建物快速化為 3D 模型，支援白模、線稿等多風格與相機視角模擬。
+            </p>
+            <div style="background: #F8F5EE; padding: 10px; border-radius: 8px; font-size: 0.82rem; color: var(--toy-teal-dark); margin-bottom: 14px; line-height: 1.5;">
+              💡 <strong>啟發點：</strong>啟發了「3D 校園導覽」將平面圖直接轉為 3D 擠出建物與視角漫遊的原型思維！
+            </div>
+          </div>
+          <a href="https://tools.oyasumi-gamedev.com/rokehan/" target="_blank" class="toy-btn toy-btn-teal" style="font-size: 0.82rem; padding: 6px 14px; text-align: center;">
+            前往網站 ↗
+          </a>
+        </div>
+
+        <!-- 網站 B: 臺北狂飆 -->
+        <div style="background: #FFF; padding: 18px; border-radius: 14px; border: 1.5px solid #E8DAC8; border-top: 6px solid var(--toy-red); display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <span class="toy-pill toy-pill-red" style="font-size: 0.75rem; margin-bottom: 8px;">台灣在地 Web 3D</span>
+            <h3 style="font-size: 1.15rem; color: var(--ink-primary); margin-bottom: 4px;">
+              臺北狂飆
+            </h3>
+            <div style="font-size: 0.82rem; color: var(--toy-red); font-weight: 700; margin-bottom: 8px;">
+              Taipei Rush
+            </div>
+            <div style="font-size: 0.85rem; color: var(--ink-secondary); margin-bottom: 12px; line-height: 1.5;">
+              作者：aicodewithme（台灣獨立開發者）<br>
+              <code style="font-size: 0.78rem;">taipei-rush.app</code>
+            </div>
+            <p style="font-size: 0.88rem; color: var(--ink-secondary); line-height: 1.6; margin-bottom: 12px;">
+              純網頁免安裝的 3D 開放世界！以 AI 輔助生成（Vibe Coding），還原台北 101、騎樓等在地生活街景與走動漫遊。
+            </p>
+            <div style="background: #F8F5EE; padding: 10px; border-radius: 8px; font-size: 0.82rem; color: var(--toy-red-dark); margin-bottom: 14px; line-height: 1.5;">
+              💡 <strong>啟發點：</strong>驗證了純前端與 AI 協作能做出流暢的在地第一人稱漫遊，促成校園視角走動系統！
+            </div>
+          </div>
+          <a href="https://www.taipei-rush.app" target="_blank" class="toy-btn toy-btn-primary" style="font-size: 0.82rem; padding: 6px 14px; text-align: center;">
+            前往網站 ↗
+          </a>
+        </div>
+
+        <!-- 網站 C: 政策島 -->
+        <div style="background: #FFF; padding: 18px; border-radius: 14px; border: 1.5px solid #E8DAC8; border-top: 6px solid var(--toy-yellow); display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <span class="toy-pill toy-pill-yellow" style="font-size: 0.75rem; margin-bottom: 8px;">微縮島嶼空間比喻</span>
+            <h3 style="font-size: 1.15rem; color: var(--ink-primary); margin-bottom: 4px;">
+              政策島
+            </h3>
+            <div style="font-size: 0.82rem; color: var(--toy-yellow-dark); font-weight: 700; margin-bottom: 8px;">
+              HEART 政策島
+            </div>
+            <div style="font-size: 0.85rem; color: var(--ink-secondary); margin-bottom: 12px; line-height: 1.5;">
+              互動政策宣傳平台<br>
+              <code style="font-size: 0.78rem;">puma.taipei/heart-island</code>
+            </div>
+            <p style="font-size: 0.88rem; color: var(--ink-secondary); line-height: 1.6; margin-bottom: 12px;">
+              以桌遊《卡坦島》為靈感的六角形 Low-Poly 3D 浮空微縮島嶼，將生硬政策拆解為主題小島與動態光影。
+            </p>
+            <div style="background: #F8F5EE; padding: 10px; border-radius: 8px; font-size: 0.82rem; color: var(--toy-yellow-dark); margin-bottom: 14px; line-height: 1.5;">
+              💡 <strong>啟發點：</strong>直接孕育了「南大附中探索群島」！將社團與學程轉化為八角浮空微縮島與橋樑。
+            </div>
+          </div>
+          <a href="https://puma.taipei/heart-island/" target="_blank" class="toy-btn toy-btn-secondary" style="font-size: 0.82rem; padding: 6px 14px; text-align: center;">
+            前往網站 ↗
+          </a>
         </div>
       </div>
     </div>

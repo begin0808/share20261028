@@ -233,39 +233,47 @@ export const slidesData = [
   {
     id: 7,
     category: "前言・社群傳播",
-    title: "行銷的力量：IG 短影音引爆社群人潮",
-    subtitle: "好作品遇見好推手：https://www.instagram.com/reels/DebXS5UPDng/",
+    title: "行銷的力量：FB 企鵝社團引爆 ＋ IG 短影音擴散",
+    subtitle: "三天破萬、一週破兩萬人次造訪！好專案更需要懂它的同好與推手",
     contentHtml: `
-      <div style="display: flex; gap: 24px; align-items: center; margin-top: 10px;">
-        <div style="flex: 1.1;">
-          <h3 style="font-size: 1.25rem; color: var(--toy-red); margin-bottom: 10px;">📱 好專案更需要懂它的伯樂！</h3>
-          <p style="font-size: 0.95rem; color: var(--ink-secondary); line-height: 1.8; margin-bottom: 14px;">
-            非常感謝在 Instagram 上有熱心創作者主動剪輯介紹了這個網站。精準的痛點切入與俐落的節奏，迅速引發了數萬名家長與學生熱烈轉發！
+      <div class="grid-2" style="margin-top: 10px;">
+        <div class="toy-card toy-card-accent" style="padding: 16px;">
+          <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 8px;">
+            <span class="toy-pill toy-pill-yellow">第一波燃點・同好熱情</span>
+            <span style="font-size: 0.82rem; font-weight: 800; color: var(--toy-red);">三天破萬・一週破兩萬</span>
+          </div>
+          <h3 style="font-size: 1.15rem; color: var(--ink-primary); margin-bottom: 8px;">
+            🐧 Facebook 企鵝愛好者社團
+          </h3>
+          <p style="font-size: 0.88rem; color: var(--ink-secondary); line-height: 1.6; margin-bottom: 12px;">
+            一開始將作品發布在企鵝同好社團，大家看到免出門、在電腦前就能看野生企鵝即時畫面，狂喜不斷轉發！短短 3 天造訪人次破萬，一週迅速衝破 2 萬人！
           </p>
-          <div style="background: #FFF; padding: 14px; border-radius: 12px; border: 1.5px solid #E8DAC8; line-height: 1.7; font-size: 0.88rem;">
-            <strong>短影音帶給教育創作者的啟發：</strong><br>
-            1. <strong>黃金 3 秒抓痛點：</strong>開頭直擊「免買門票、在家看野生非洲動物」！<br>
-            2. <strong>動態展示勝過萬語：</strong>滑動 3D 地球儀與斑馬喝水實況，說服力十足。<br>
-            3. <strong>情感共鳴引爆分享：</strong>不聊複雜技術，只談能幫家庭帶來怎樣的驚喜。
-          </div>
-          <div style="margin-top: 14px;">
-            <a href="https://www.instagram.com/reels/DebXS5UPDng/" target="_blank" class="toy-btn toy-btn-secondary" style="font-size: 0.88rem; padding: 6px 16px;">
-              觀看 IG Reels 推薦短影音 ↗
-            </a>
-          </div>
+          <a href="https://www.facebook.com/share/p/1BLxg64nEh/" target="_blank" class="toy-btn toy-btn-primary" style="font-size: 0.8rem; padding: 5px 12px;">
+            查看 FB 社團發文 ↗
+          </a>
         </div>
-        <div style="flex: 0.9; text-align: center;">
-          <div class="toy-card toy-card-teal" style="padding: 24px; border: 2.5px solid #3C332A;">
-            <div style="font-size: 2.5rem; margin-bottom: 8px;">🎬</div>
-            <h4 style="font-size: 1.1rem; color: var(--toy-teal-dark); margin-bottom: 8px;">技術是骨架，傳播是翅膀</h4>
-            <p style="font-size: 0.85rem; color: var(--ink-secondary); line-height: 1.6;">
-              很多好作品默默躺在硬碟裡很可惜。學會用大眾聽得懂的語言與短影音行銷借力，才能讓教育專案走進更多人的生活！
-            </p>
+
+        <div class="toy-card toy-card-teal" style="padding: 16px;">
+          <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 8px;">
+            <span class="toy-pill toy-pill-teal">第二波擴散・短影音行銷</span>
+            <span style="font-size: 0.82rem; font-weight: 800; color: var(--toy-teal-dark);">破四萬人次大關</span>
           </div>
+          <h3 style="font-size: 1.15rem; color: var(--ink-primary); margin-bottom: 8px;">
+            📱 Instagram 創作者熱情推薦
+          </h3>
+          <p style="font-size: 0.88rem; color: var(--ink-secondary); line-height: 1.6; margin-bottom: 12px;">
+            熱心創作者主動剪輯介紹短影音，開頭 3 秒直擊「免買門票、在家帶孩子看野生動物」真痛點，明快節奏讓熱度持續延燒，一個多月累積突破 41,000+ 人次！
+          </p>
+          <a href="https://www.instagram.com/reels/DebXS5UPDng/" target="_blank" class="toy-btn toy-btn-teal" style="font-size: 0.8rem; padding: 5px 12px;">
+            觀看 IG Reels 推薦 ↗
+          </a>
         </div>
       </div>
+      <div class="toy-callout toy-callout-tip" style="margin-top: 14px; text-align: center;">
+        <strong>技術是骨架，傳播是翅膀！用大眾聽得懂的痛點溝通，才能讓教育專案走進千家萬戶。</strong>
+      </div>
     `,
-    speakerNotes: "分享社群傳播心得。很多老師專案做得很棒，但不知道怎麼讓別人知道。感謝 IG 創作者的短影音，讓我學到：技術是骨架，傳播是翅膀。用痛點與情感跟大眾溝通，才能發揮最大的影響力。"
+    speakerNotes: "分享社群爆紅歷程。第一步先丟進同溫層精準受眾（FB企鵝社團），引發三天破萬、一週兩萬的熱潮；第二步被 IG 創作者看見並剪輯短影音，直擊親子痛點擴散至大眾，衝破四萬人次！"
   },
   {
     id: 8,
