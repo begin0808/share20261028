@@ -1,0 +1,331 @@
+/* ========================================================
+   WARM TOY THEME (溫暖玩具風格設計系統)
+   Inspired by wooden toy workshops, miniature dioramas, 
+   tactile clay blocks, and cozy educational games.
+   ======================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Outfit:wght@500;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+:root {
+  /* Color Tokens */
+  --bg-canvas: #FAF6ED;
+  --bg-subtle: #F3ECE0;
+  --bg-card: #FFFFFF;
+  --bg-card-alt: #FFFDF8;
+  --bg-toy-box: #EFE4D2;
+  
+  /* Toy Accent Palette */
+  --toy-red: #E0694F;        /* Terracotta Clay */
+  --toy-red-dark: #C45037;
+  --toy-yellow: #F2A343;     /* Mustard Toy Wood */
+  --toy-yellow-dark: #D48729;
+  --toy-teal: #2E9A86;       /* Island Green */
+  --toy-teal-dark: #217868;
+  --toy-blue: #4A88A9;       /* Ocean Block */
+  --toy-blue-dark: #376C87;
+  --toy-purple: #9263A3;     /* Playful Berry */
+  --toy-sand: #E8D7BF;
+  
+  /* Text & Inks */
+  --ink-primary: #332B25;     /* Dark Roasted Wood */
+  --ink-secondary: #6B5E54;   /* Muted Walnut */
+  --ink-tertiary: #96887D;    /* Soft Clay */
+  --ink-light: #FAF6ED;
+  
+  /* Toy Outlines & Tactile Borders */
+  --border-toy: 2.5px solid #E2D3BF;
+  --border-toy-dark: 2.5px solid #45392F;
+  --border-toy-accent: 3px solid var(--toy-yellow);
+  
+  /* Tactile Toy 3D Shadows */
+  --toy-shadow-sm: 0 3px 0 #DBC8B0, 0 4px 8px rgba(60, 45, 30, 0.05);
+  --toy-shadow-md: 0 6px 0 #DBC8B0, 0 10px 18px rgba(60, 45, 30, 0.07);
+  --toy-shadow-lg: 0 10px 0 #D1BC9E, 0 18px 30px rgba(60, 45, 30, 0.1);
+  --toy-shadow-pressed: 0 1px 0 #DBC8B0, 0 2px 4px rgba(60, 45, 30, 0.08);
+  
+  /* Colored Tactile Shadows */
+  --btn-red-shadow: 0 5px 0 var(--toy-red-dark), 0 8px 16px rgba(224, 105, 79, 0.25);
+  --btn-yellow-shadow: 0 5px 0 var(--toy-yellow-dark), 0 8px 16px rgba(242, 163, 67, 0.25);
+  --btn-teal-shadow: 0 5px 0 var(--toy-teal-dark), 0 8px 16px rgba(46, 154, 134, 0.25);
+  --btn-blue-shadow: 0 5px 0 var(--toy-blue-dark), 0 8px 16px rgba(74, 136, 169, 0.25);
+
+  /* Radius */
+  --radius-pill: 999px;
+  --radius-lg: 24px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+
+  /* Typography */
+  --font-heading: 'Outfit', 'Noto Sans TC', sans-serif;
+  --font-body: 'Plus Jakarta Sans', 'Noto Sans TC', sans-serif;
+}
+
+/* Reset & Basics */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-canvas);
+  color: var(--ink-primary);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(#E8DEC8 1.5px, transparent 1.5px),
+    radial-gradient(#E8DEC8 1.5px, var(--bg-canvas) 1.5px);
+  background-size: 36px 36px;
+  background-position: 0 0, 18px 18px;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--font-heading);
+  color: var(--ink-primary);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+a {
+  color: var(--toy-teal);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--toy-red);
+}
+
+/* Tactile Toy Buttons */
+.toy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: var(--border-toy-dark);
+  cursor: pointer;
+  transition: all 0.15s ease-out;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.toy-btn:active {
+  transform: translateY(4px);
+  box-shadow: var(--toy-shadow-pressed) !important;
+}
+
+.toy-btn-primary {
+  background: var(--toy-red);
+  color: #FFF;
+  border-color: #38241D;
+  box-shadow: var(--btn-red-shadow);
+}
+
+.toy-btn-primary:hover {
+  background: #E8755D;
+}
+
+.toy-btn-secondary {
+  background: var(--toy-yellow);
+  color: #38241D;
+  border-color: #38241D;
+  box-shadow: var(--btn-yellow-shadow);
+}
+
+.toy-btn-secondary:hover {
+  background: #F8AF55;
+}
+
+.toy-btn-teal {
+  background: var(--toy-teal);
+  color: #FFF;
+  border-color: #173831;
+  box-shadow: var(--btn-teal-shadow);
+}
+
+.toy-btn-teal:hover {
+  background: #37A894;
+}
+
+.toy-btn-blue {
+  background: var(--toy-blue);
+  color: #FFF;
+  border-color: #213947;
+  box-shadow: var(--btn-blue-shadow);
+}
+
+.toy-btn-ghost {
+  background: var(--bg-card);
+  color: var(--ink-primary);
+  border: var(--border-toy);
+  box-shadow: var(--toy-shadow-sm);
+}
+
+.toy-btn-ghost:hover {
+  background: #FFF;
+  border-color: var(--toy-yellow);
+  transform: translateY(-1px);
+}
+
+/* Toy Card Blocks */
+.toy-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: var(--border-toy);
+  box-shadow: var(--toy-shadow-md);
+  padding: 26px;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.toy-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--toy-shadow-lg);
+}
+
+.toy-card-alt {
+  background: var(--bg-card-alt);
+}
+
+.toy-card-accent {
+  border-top: 6px solid var(--toy-yellow);
+}
+
+.toy-card-red {
+  border-top: 6px solid var(--toy-red);
+}
+
+.toy-card-teal {
+  border-top: 6px solid var(--toy-teal);
+}
+
+.toy-card-blue {
+  border-top: 6px solid var(--toy-blue);
+}
+
+/* Toy Badges & Pills */
+.toy-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 700;
+  border: 1.5px solid rgba(0, 0, 0, 0.1);
+}
+
+.toy-pill-yellow {
+  background: #FEF3D6;
+  color: #8C5810;
+  border-color: #F8D88E;
+}
+
+.toy-pill-red {
+  background: #FCE8E3;
+  color: #9C331B;
+  border-color: #F5BCB0;
+}
+
+.toy-pill-teal {
+  background: #E1F4F0;
+  color: #176B5C;
+  border-color: #A9DFD4;
+}
+
+.toy-pill-blue {
+  background: #E4EFF5;
+  color: #245672;
+  border-color: #A8CEE0;
+}
+
+.toy-pill-purple {
+  background: #F4EAF7;
+  color: #643174;
+  border-color: #DABDE2;
+}
+
+/* Toy Callouts */
+.toy-callout {
+  padding: 20px 24px;
+  border-radius: var(--radius-md);
+  margin: 18px 0;
+  border-left: 6px solid;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.toy-callout-icon {
+  font-size: 1.8rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.toy-callout-warning {
+  background: #FEF7EA;
+  border-color: var(--toy-yellow);
+  color: #5E3D0B;
+}
+
+.toy-callout-pitfall {
+  background: #FDF1EE;
+  border-color: var(--toy-red);
+  color: #692212;
+}
+
+.toy-callout-tip {
+  background: #EBF7F4;
+  border-color: var(--toy-teal);
+  color: #134E43;
+}
+
+.toy-callout-info {
+  background: #EDF5F9;
+  border-color: var(--toy-blue);
+  color: #1D4359;
+}
+
+/* Animations */
+@keyframes toyBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes toyPop {
+  0% { transform: scale(0.95); opacity: 0; }
+  70% { transform: scale(1.02); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.toy-bob {
+  animation: toyBob 3s ease-in-out infinite;
+}
+
+.toy-pop {
+  animation: toyPop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-subtle);
+}
+::-webkit-scrollbar-thumb {
+  background: #D4C3AC;
+  border-radius: var(--radius-pill);
+  border: 2px solid var(--bg-subtle);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #BFA98F;
+}

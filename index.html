@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D 互動校園與教育應用 — 2026/10/28 線上分享會</title>
+  <meta name="description" content="有了 AI 工具的協助，3D 作品的製作門檻已經降低不少。分享 3D 校園導覽、探索群島開發過程中踩過的坑、遇到的問題與摸索出的實戰經驗。">
+
+  <!-- Favicon: 3D Badge -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23E0694F'/><text x='50%' y='68%' font-size='52' font-family='system-ui,sans-serif' font-weight='900' fill='white' text-anchor='middle'>3D</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/toy-theme.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/slides.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <div class="app-container">
+
+    <!-- Top Sticky Toy Bar Header -->
+    <header class="toy-header">
+      <div class="toy-nav-container">
+        <!-- Brand / 3D Logo -->
+        <a class="brand-section" href="#/overview">
+          <div class="brand-avatar-3d">3D</div>
+          <div class="brand-titles">
+            <div class="brand-title">
+              <span>3D 互動校園與教育應用</span>
+              <span class="toy-pill toy-pill-yellow" style="font-size: 0.72rem; padding: 2px 8px;">2026/10/28</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Main Chapter Navigation Tabs (不是一頁式，真實分頁路由) -->
+        <nav>
+          <ul class="toy-nav-tabs">
+            <li><button class="nav-tab-btn active" data-route="overview">🏠 總覽</button></li>
+            <li><button class="nav-tab-btn" data-route="preface">💡 前言思維</button></li>
+            <li><button class="nav-tab-btn" data-route="campus-tour">🏫 校園導覽</button></li>
+            <li><button class="nav-tab-btn" data-route="islands">🏝️ 探索群島</button></li>
+            <li><button class="nav-tab-btn" data-route="creative-extensions">✨ 延伸發想</button></li>
+            <li><button class="nav-tab-btn" data-route="pitfalls-costs">☁️ 部署方案</button></li>
+            <li><button class="nav-tab-btn" data-route="toolbox">📋 提示詞庫</button></li>
+          </ul>
+        </nav>
+
+        <!-- Right Action Dock (雙模式切換) -->
+        <div class="header-actions">
+          <div class="mode-toggle-group">
+            <button id="btnModeReader" class="mode-toggle-btn active" title="切換為專題閱讀手冊模式">
+              📖 專題模式
+            </button>
+            <button id="btnModeSlides" class="mode-toggle-btn" title="切換為演講全螢幕簡報模式">
+              📺 簡報模式
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="app-main">
+
+      <!-- MODE 1: 專題詳細閱讀手冊模式 (Articles & Guides) -->
+      <section id="mainPageView" class="page-view active"></section>
+
+      <!-- MODE 2: 演講簡報模式 (Slide Deck Presentation Mode) -->
+      <section id="slidesViewWrapper" class="slides-view-wrapper">
+        <!-- Top Progress Indicator -->
+        <div class="slide-progress-bar">
+          <div id="slideProgressFill" class="slide-progress-fill"></div>
+        </div>
+
+        <!-- Slide Stage Canvas -->
+        <div class="slide-stage">
+          <div id="slideFrame" class="slide-frame toy-pop">
+            <!-- Slide Meta Header -->
+            <div class="slide-meta-row">
+              <span id="slideCatPill" class="slide-category-pill">開場總覽</span>
+              <span id="slideCounterBadge" class="slide-counter-badge">Slide 01 / 27</span>
+            </div>
+
+            <!-- Slide Title & Content -->
+            <h2 id="slideTitle" class="slide-title">用 AI 打造 3D 互動校園與教育應用</h2>
+            <div id="slideSubtitle" class="slide-subtitle">從想法到作品：踩過的坑、摸索的經驗與無限可能</div>
+            <div id="slideBody" class="slide-body"></div>
+
+            <!-- Speaker Notes Drawer (可摺疊備忘錄) -->
+            <div id="slideNotesDrawer" class="slide-notes-drawer">
+              <div class="slide-notes-header">
+                <span>📝 講者備忘錄與補充解說</span>
+                <button onclick="window.toggleNotesDrawer()" style="background: none; border: none; color: #FFF; cursor: pointer; font-size: 1rem;">✕ 收合</button>
+              </div>
+              <p id="slideNotesText" style="margin: 0;"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Floating Presenter Dock -->
+        <div class="presenter-dock">
+          <button class="dock-btn" onclick="window.firstSlide()" title="第一頁 (Home)">
+            ⏮ <span>第一頁</span>
+          </button>
+          <button class="dock-btn" onclick="window.prevSlide()" title="上一張 (方向鍵左 / PageUp)">
+            ◀ <span>上一張</span>
+          </button>
+          <button class="dock-btn-primary dock-btn" onclick="window.nextSlide()" title="下一張 (方向鍵右 / Space)">
+            <span>下一張</span> ▶
+          </button>
+          <button class="dock-btn" onclick="window.lastSlide()" title="最後一頁 (End)">
+            <span>最後一頁</span> ⏭
+          </button>
+          <div class="dock-divider"></div>
+          <button class="dock-btn" onclick="window.openSlideDrawer()" title="開啟幻燈片總覽目錄">
+            📑 <span>目錄</span>
+          </button>
+          <button class="dock-btn" onclick="window.toggleNotesDrawer()" title="開關講者備忘錄 (快速鍵 N)">
+            📝 <span>備忘</span>
+          </button>
+          <div class="dock-divider"></div>
+          <!-- 研習進行時鐘 -->
+          <div id="dockTimerDisplay" class="dock-timer">
+            <span>⏰ 20:00~21:30</span>
+          </div>
+          <div class="dock-divider"></div>
+          <button class="dock-btn" onclick="window.toggleFullScreen()" title="全螢幕切換 (快速鍵 F)">
+            ⛶ <span>全螢幕</span>
+          </button>
+        </div>
+
+        <!-- Slide Thumbnails Drawer Modal -->
+        <div id="slideDrawerOverlay" class="slide-drawer-overlay" onclick="if(event.target === this) window.closeSlideDrawer();">
+          <div class="slide-drawer-box toy-pop">
+            <div class="slide-drawer-header">
+              <div style="font-size: 1.25rem; font-weight: 800; color: var(--ink-primary);">
+                📑 簡報投影片總目錄 (共 25 頁)
+              </div>
+              <button onclick="window.closeSlideDrawer()" class="toy-btn toy-btn-ghost" style="padding: 4px 12px; font-size: 0.85rem;">✕ 關閉</button>
+            </div>
+            <div id="slideDrawerGrid" class="slide-drawer-grid"></div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="toy-footer">
+      <div class="footer-links">
+        <a href="https://begin0808.github.io/3Dtntcsh/" target="_blank">3D 校園導覽 ↗</a>
+        <a href="https://tntcshisland.vercel.app/" target="_blank">南大附中探索群島 ↗</a>
+        <a href="https://animalia-live.vercel.app/" target="_blank">全球動物現場 ↗</a>
+      </div>
+      <div style="font-size: 0.95rem; color: var(--ink-secondary); margin-top: 10px; display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap;">
+        <span>© 2026 <a href="https://begin0808.github.io/studio0808/" target="_blank" style="text-decoration: underline; color: inherit; font-weight: 700;">Studio0808 智造實驗室</a>. All rights reserved.</span>
+        <a href="mailto:begin0808@gmail.com" style="color: inherit; text-decoration: none;">✉ 寫信給我</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Main JavaScript App -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "ai-3d-campus-presentation-20261028",
+  "version": "1.0.0",
+  "description": "用 AI 打造 3D 互動校園與教育應用線上分享會 — 溫暖玩具風格互動簡報與研習手冊網站",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "npx -y serve . -p 3000"
+  },
+  "keywords": [
+    "three.js",
+    "ai",
+    "education",
+    "3d-campus",
+    "claude-code",
+    "presentation"
+  ],
+  "author": "南大附中分享會",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^6.0.0"
+  }
+}
